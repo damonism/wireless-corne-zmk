@@ -1,7 +1,48 @@
 layout: {zmk_keyboard: corne, layout_name: foostan_corne_6col_layout}
 layers:
-  default: [↹, Q, W, E, R, T, Y, U, I, O, P, ⌫, ⌘, A, S, D, F, G, '&td_dsh', J, K, L, SEMI, SQT, ⇧, Z, X, C, V, B, N, M, COMMA, DOT, FSLH, ⎋, ⌃, lower, SPACE, RET,
-    raise, ⎇]
+  default:
+  - ↹
+  - Q
+  - W
+  - E
+  - R
+  - T
+  - Y
+  - U
+  - I
+  - O
+  - P
+  - ⌫
+  - ⌘
+  - A
+  - S
+  - D
+  - F
+  - G
+  - H
+  - J
+  - K
+  - L
+  - {t: ;, s: ':'}
+  - ''''
+  - ⇧
+  - Z
+  - X
+  - C
+  - V
+  - B
+  - N
+  - M
+  - {t: ',', s: <}
+  - {t: ., s: '>'}
+  - /
+  - ESC
+  - ⌃
+  - lower
+  - SPACE
+  - RET
+  - raise
+  - ⎇
   lower:
   - {t: ▽, type: trans}
   - '1'
@@ -38,7 +79,7 @@ layers:
   - PG DN
   - END
   - F12
-  - {t: ⎋, s: GRAVE}
+  - {t: ESC, s: '`'}
   - {t: ▽, type: trans}
   - {type: held}
   - {t: ▽, type: trans}
@@ -47,16 +88,16 @@ layers:
   - {t: ▽, type: trans}
   raise:
   - {t: ▽, type: trans}
-  - EXCL
-  - AT
-  - HASH
-  - DLLR
-  - PRCNT
-  - CARET
-  - AMPS
-  - ASTRK
-  - LPAR
-  - RPAR
+  - '!'
+  - '@'
+  - '#'
+  - $
+  - '%'
+  - ^
+  - '&'
+  - '*'
+  - (
+  - )
   - ⌫
   - {t: ▽, type: trans}
   - –
@@ -64,24 +105,24 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - MINUS
-  - EQUAL
-  - LBKT
-  - RBKT
-  - BSLH
-  - GRAVE
+  - {t: '-', s: _}
+  - {t: '=', s: +}
+  - {t: '[', s: '{'}
+  - {t: ']', s: '}'}
+  - \
+  - {t: '`', s: '~'}
   - {t: ▽, type: trans}
   - —
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - UNDER
-  - PLUS
-  - LBRC
-  - RBRC
-  - PIPE
-  - TILDE
+  - _
+  - +
+  - '{'
+  - '}'
+  - '|'
+  - '~'
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
