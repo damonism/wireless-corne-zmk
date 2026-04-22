@@ -93,11 +93,11 @@
         };
 
         lower_layer {
-            // -----------------------------------------------------------------------------------
-            // | TAB  |  1  |  2  |  3  |  4  |  5  |   |  6   |  7   |  8   |  9   |  0  | DEL  |
-            // | GIU  | F1  | F2  | F3  | F3  | F5  |   | LEFT | DOWN |  UP  | RIGT | F11 |      |
-            // | SHFT | F6  | F7  | F8  | F9  | F10 |   | HOME | PGDN | PGUP | END  | F12 | GRESC|
-            //                    | GUI |     | SPC |   | ENT  |      | ALT  |
+            // ------------------------------------------------------------------------------------
+            // | TAB  |  1  |  2  |  3   |  4  |  5  |   |  6   |  7   |  8   |  9   |  0  | DEL  |
+            // | GIU  | F1  | F2  | F3   | F3  | F5  |   | LEFT | DOWN |  UP  | RIGT | F11 |      |
+            // | SHFT | F6  | F7  | F8   | F9  | F10 |   | HOME | PGDN | PGUP | END  | F12 | GRESC|
+            //                    | CTRL |     | SPC |   | ENT  |      | ALT  |
             bindings = <
                &trans  &kp N1  &kp N2  &kp N3  &kp N4  &kp N5     &kp N6   &kp N7    &kp N8    &kp N9    &kp N0  &kp DEL
                &trans  &kp F1  &kp F2  &kp F3  &kp F4  &kp F5     &kp LEFT &kp DOWN  &kp UP    &kp RIGHT &kp F11 &trans
@@ -107,27 +107,27 @@
         };
 
         raise_layer {
-            // -----------------------------------------------------------------------------------------
-            // |  TAB |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | BKSP |
-            // | CTRL |  EN |     |     |     |     |   |  -  |  =  |  [  |  ]  |  \  |  `   |
-            // | SHFT |  EM |     |     |     |     |   |  _  |  +  |  {  |  }  | "|" |  ~   |
-            //                    | GUI |     | SPC |   | ENT |     | ALT |
+            // --------------------------------------------------------------------------------
+            // | TAB  |  !  |  @  |  #   |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | BKSP |
+            // | GUI  |  EN |     |      |     |     |   |  -  |  =  |  [  |  ]  |  \  |  `   |
+            // | SHFT |  EM |     |      |     |     |   |  _  |  +  |  {  |  }  | "|" |  ~   |
+            //                    | CTRL |     | SPC |   | ENT |     | ALT |
             bindings = <
-               &trans &kp EXCL &kp AT &kp HASH &kp DLLR &kp PRCNT    &kp CARET &kp AMPS  &kp KP_MULTIPLY &kp LPAR &kp RPAR &kp BSPC
-               &trans &en_dash &trans &trans   &trans   &trans       &kp MINUS &kp EQUAL &kp LBKT        &kp RBKT &kp BSLH &kp GRAVE
-               &trans &em_dash &trans &trans   &trans   &trans       &kp UNDER &kp PLUS  &kp LBRC        &kp RBRC &kp PIPE &kp TILDE
+               &trans &kp EXCL &kp AT &kp HASH &kp DLLR &kp PRCNT    &kp CARET &kp AMPS  &kp ASTRK &kp LPAR &kp RPAR &kp BSPC
+               &trans &en_dash &trans &trans   &trans   &trans       &kp MINUS &kp EQUAL &kp LBKT  &kp RBKT &kp BSLH &kp GRAVE
+               &trans &em_dash &trans &trans   &trans   &trans       &kp UNDER &kp PLUS  &kp LBRC  &kp RBRC &kp PIPE &kp TILDE
                                       &trans   &trans   &trans       &trans    &trans    &trans
             >;
         };
 
         adjust_layer {
-            // -----------------------------------------------------------------------------------------
-            // |      | BT1 | BT2 | BT3 | BT4 | BT5 |   | MUTE|     |     |     |PLAY |     |
-            // |      |     |     |     |     |     |   | VLUP|BRIUP|     |     |     |     |
-            // |      |     |     |     |     |     |   | VLDN|BRIDN|PREV |NEXT |     |     | BTCLR
-            //                    | GUI |     | SPC |   | ENT |     | ALT |
+            // ---------------------------------------------------------------------------------------
+            // |      | BT1 | BT2 | BT3  | BT4 | BT5 |   | MUTE|     |     |     |PLAY |     |       |
+            // |      |     |     |      |     |     |   | VLUP|BRIUP|     |     |     |     |       |
+            // |      |     |     |      |     |     |   | VLDN|BRIDN|PREV |NEXT |     |     | BTCLR |
+            //                    | CTRL |     | SPC |   | ENT |     | ALT |
             bindings = <
-               &out OUT_TOG &bt BT0 &bt BT1 &bt BT2 &bt BT3 &bt BT4   &kp K_MUTE   &trans       &trans     &trans     &kp C_PP &trans 
+               &out OUT_TOG &bt BT0 &bt BT1 &bt BT2 &bt BT3 &bt BT4   &kp C_MUTE   &trans       &trans     &trans     &kp C_PP &trans 
                &trans       &trans  &trans  &trans  &trans  &trans    &kp C_VOL_UP &kp C_BRI_UP &trans     &trans     &trans   &trans
                &trans       &trans  &trans  &trans  &trans  &trans    &kp C_VOL_DN &kp C_BRI_DN &kp C_PREV &kp C_NEXT &trans   &bt BT_CLR
                                             &trans &trans   &trans    &trans      &trans       &trans
