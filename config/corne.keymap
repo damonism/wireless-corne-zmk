@@ -87,21 +87,21 @@
             bindings = <
                &kp TAB     &kp Q &kp W &kp E     &kp R &kp T      &kp Y   &kp U &kp I     &kp O   &kp P    &kp BSPC
                &kp LGUI    &kp A &kp S &kp D     &kp F &kp G      &td_dsh &kp J &kp K     &kp L   &kp SEMI &kp SQT
-               &smart_shft &kp Z &kp X &kp C     &kp V &kp B      &kp N   &kp M &kp COMMA &kp DOT &kp FSLH &kp ESC
+               &smart_shft &kp Z &kp X &kp C     &kp V &kp B      &kp N   &kp M &kp COMMA &kp DOT &kp FSLH &gresc
                                        &kp LCTRL &mo 1 &kp SPACE  &kp RET &mo 2 &kp RALT
             >;
         };
 
         lower_layer {
-            // ------------------------------------------------------------------------------------
-            // | TAB  |  1  |  2  |  3   |  4  |  5  |   |  6   |  7   |  8   |  9   |  0  | DEL  |
-            // | GIU  | F1  | F2  | F3   | F3  | F5  |   | LEFT | DOWN |  UP  | RIGT | F11 |      |
-            // | SHFT | F6  | F7  | F8   | F9  | F10 |   | HOME | PGDN | PGUP | END  | F12 | GRESC|
+            // -----------------------------------------------------------------------------------
+            // | TAB  |  1  |  2  |  3   |  4  |  5  |   |  6   |  7   |  8   |  9   |  0  | DEL |
+            // | GIU  | F1  | F2  | F3   | F3  | F5  |   | LEFT | DOWN |  UP  | RIGT | F11 |     |
+            // | SHFT | F6  | F7  | F8   | F9  | F10 |   | HOME | PGDN | PGUP | END  | F12 |     |
             //                    | CTRL |     | SPC |   | ENT  |      | ALT  |
             bindings = <
                &trans  &kp N1  &kp N2  &kp N3  &kp N4  &kp N5     &kp N6   &kp N7    &kp N8    &kp N9    &kp N0  &kp DEL
                &trans  &kp F1  &kp F2  &kp F3  &kp F4  &kp F5     &kp LEFT &kp DOWN  &kp UP    &kp RIGHT &kp F11 &trans
-               &trans  &kp F6  &kp F7  &kp F8  &kp F9  &kp F10    &kp END  &kp PG_UP &kp PG_DN &kp END   &kp F12 &gresc
+               &trans  &kp F6  &kp F7  &kp F8  &kp F9  &kp F10    &kp HOME &kp PG_UP &kp PG_DN &kp END   &kp F12 &trans
                                        &trans  &trans  &trans     &trans   &trans    &trans
             >;
         };
@@ -109,13 +109,13 @@
         raise_layer {
             // --------------------------------------------------------------------------------
             // | TAB  |  !  |  @  |  #   |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | BKSP |
-            // | GUI  |  EN |     |      |     |     |   |  -  |  =  |  [  |  ]  |  \  |  `   |
-            // | SHFT |  EM |     |      |     |     |   |  _  |  +  |  {  |  }  | "|" |  ~   |
+            // | GUI  |  EN |     |      |     |     |   |  -  |  =  |  [  |  ]  | "|" |  `   |
+            // | SHFT |  EM |     |      |     |     |   |  _  |  +  |  {  |  }  |  \  |  ~   |
             //                    | CTRL |     | SPC |   | ENT |     | ALT |
             bindings = <
                &trans &kp EXCL &kp AT &kp HASH &kp DLLR &kp PRCNT    &kp CARET &kp AMPS  &kp ASTRK &kp LPAR &kp RPAR &kp BSPC
-               &trans &en_dash &trans &trans   &trans   &trans       &kp MINUS &kp EQUAL &kp LBKT  &kp RBKT &kp BSLH &kp GRAVE
-               &trans &em_dash &trans &trans   &trans   &trans       &kp UNDER &kp PLUS  &kp LBRC  &kp RBRC &kp PIPE &kp TILDE
+               &trans &en_dash &trans &trans   &trans   &trans       &kp MINUS &kp EQUAL &kp LBKT  &kp RBRC &kp BSLH &kp GRAVE
+               &trans &em_dash &trans &trans   &trans   &trans       &kp UNDER &kp PLUS  &kp LBRC  &kp RBKT &kp PIPE &kp TILDE
                                       &trans   &trans   &trans       &trans    &trans    &trans
             >;
         };
