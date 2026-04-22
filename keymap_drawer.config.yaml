@@ -1,0 +1,2 @@
+draw_config:
+  layout: {zmk_keyboard: corne, layout_name: foostan_corne_6col_layout}
