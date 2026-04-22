@@ -1,2 +1,39 @@
+parse_config:
+  raw_binding_map:
+    '&smart_shft': '⇧'
+    '&en_dash': '–'
+    '&em_dash': '—'
+    '&td_dash': H
+  zmk_keycode_map:
+    BSPC: '⌫'
+    DEL: '⌦'
+    LCTRL: ⌃
+    LALT: ⎇
+    LGUI: ⌘
+    LSHFT: ⇧
+    RCTRL: ⌃
+    LEFT_CONTROL: ⌃
+    LEFT_ALT: ⎇
+    LEFT_GUI: ⌘
+    LEFT_SHFT: ⇧
+    RALT: ⎇
+    RGUI: ⌘
+    RSHFT: ⇧
+    RIGHT_CONTROL: ⌃
+    RIGHT_ALT: ⎇
+    RIGHT_GUI: ⌘
+    RIGHT_SHFT: ⇧
+    LEFT: ←
+    RIGHT: →
+    UP: ↑
+    DOWN: ↓
+    TAB: ↹
+    ENT: '⏎'
+    ESC: '⎋'
+    C_BRI_DN: '☀↓'
+    C_BRI_UP: '☀↑'
+    C_PREV: '⏮'
+    C_NEXT: '⏭'
+    C_PP: '⏯'
 draw_config:
-  layout: {zmk_keyboard: corne, layout_name: foostan_corne_6col_layout}
+layout: {zmk_keyboard: corne, layout_name: foostan_corne_6col_layout}
