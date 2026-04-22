@@ -35,5 +35,3 @@ parse_config:
     C_PREV: '⏮'
     C_NEXT: '⏭'
     C_PP: '⏯'
-layout: 
-  zmk_keyboard: corne
