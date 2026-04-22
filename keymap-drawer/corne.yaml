@@ -36,7 +36,7 @@ layers:
   - {t: ',', s: <}
   - {t: ., s: '>'}
   - /
-  - ESC
+  - {t: ESC, s: '`'}
   - ⌃
   - lower
   - SPACE
@@ -74,12 +74,12 @@ layers:
   - F8
   - F9
   - F10
-  - END
+  - HOME
   - PG UP
   - PG DN
   - END
   - F12
-  - {t: ESC, s: '`'}
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {type: held}
   - {t: ▽, type: trans}
@@ -108,7 +108,7 @@ layers:
   - {t: '-', s: _}
   - {t: '=', s: +}
   - {t: '[', s: '{'}
-  - {t: ']', s: '}'}
+  - '}'
   - \
   - {t: '`', s: '~'}
   - {t: ▽, type: trans}
@@ -120,7 +120,7 @@ layers:
   - _
   - +
   - '{'
-  - '}'
+  - {t: ']', s: '}'}
   - '|'
   - '~'
   - {t: ▽, type: trans}
