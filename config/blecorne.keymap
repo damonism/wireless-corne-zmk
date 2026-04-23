@@ -60,26 +60,11 @@
 
     behaviors {
     
-        shift_key: shift_key {
-            compatible = "zmk,behavior-key-press";
-            #binding-cells = <0>;
-            bindings = <&kp LSHFT>;
-        };
-
-        td_caps: tap_dance_caps {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&caps_word>, <&kp CAPSLOCK>;
-        };
-
         smart_shft: smart_shift {
-            compatible = "zmk,behavior-hold-tap";
+            compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            quick-tap-ms = <200>;
-            flavor = "tap-preferred";
-            bindings = <&shift_key &td_caps>;
+            bindings = <&sk LSHFT>, <&caps_word>;
+            mods = <(MOD_LSFT)>;
         };
 
         td_dsh: tap_dance_dash {
