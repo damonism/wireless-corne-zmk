@@ -59,23 +59,6 @@
     };
 
     behaviors {
-        /* NOT USED */
-        smart_shft: smart_shift {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&sk LSHFT>, <&caps_word>;
-            mods = <(MOD_LSFT)>;
-        };
-
-        / *
-          * Combination of caps_td and ss_caps
-          *
-          * Hold: Shift (normal modifier)
-          * Tap once: Caps Word ON
-          * Tap again: Caps Word OFF
-          * Double tap: Caps Lock ON
-          * Tap while Caps Lock is on: Caps Lock OFF (standard behavior)
-          * /
 
         caps_td: caps_tap_dance {
             compatible = "zmk,behavior-tap-dance";
