@@ -25,7 +25,7 @@ layers:
   - L
   - {t: ;, s: ':'}
   - ''''
-  - '&smart_shift_caps'
+  - '&ss_caps'
   - Z
   - X
   - C
