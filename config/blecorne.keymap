@@ -59,11 +59,37 @@
     };
 
     behaviors {
+        /* NOT USED */
         smart_shft: smart_shift {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&sk LSHFT>, <&caps_word>;
             mods = <(MOD_LSFT)>;
+        };
+
+        caps_td: caps_tap_dance {
+            compatible = "zmk,behavior-tap-dance";
+            label = "CAPS_TD";
+            #binding-cells = <0>;
+
+            tapping-term-ms = <200>;
+
+            bindings = <
+                &caps_word   /* single tap */
+                &caps_lock   /* double tap */
+            >;
+        };
+
+        smart_shift_caps: smart_shift_caps {
+            compatible = "zmk,behavior-mod-tap";
+            label = "SMART_SHIFT_CAPS";
+            #binding-cells = <0>;
+
+            flavor = "tap-preferred";
+            tapping-term-ms = <200>;
+
+            mods = <(MOD_LSFT)>;
+            bindings = <&caps_td>;
         };
 
         td_dsh: tap_dance_dash {
@@ -85,9 +111,9 @@
             // | SHFT |  Z  |  X  |  C   |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | ESC  |
             //                    | CTRL | LWR | SPC |   | ENT | RSE  | ALT |
             bindings = <
-               &kp TAB     &kp Q &kp W &kp E     &kp R &kp T      &kp Y   &kp U &kp I     &kp O   &kp P    &kp BSPC
-               &kp LGUI    &kp A &kp S &kp D     &kp F &kp G      &td_dsh &kp J &kp K     &kp L   &kp SEMI &kp SQT
-               &smart_shft &kp Z &kp X &kp C     &kp V &kp B      &kp N   &kp M &kp COMMA &kp DOT &kp FSLH &gresc
+               &kp TAB           &kp Q &kp W &kp E     &kp R &kp T      &kp Y   &kp U &kp I     &kp O   &kp P    &kp BSPC
+               &kp LGUI          &kp A &kp S &kp D     &kp F &kp G      &td_dsh &kp J &kp K     &kp L   &kp SEMI &kp SQT
+               &smart_shift_caps &kp Z &kp X &kp C     &kp V &kp B      &kp N   &kp M &kp COMMA &kp DOT &kp FSLH &gresc
                                        &kp LCTRL &mo 1 &kp SPACE  &kp RET &mo 2 &kp RALT
             >;
         };
