@@ -71,13 +71,12 @@
         };
 
         smart_shft: smart_shift {
-
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
             quick-tap-ms = <200>;
-            bindings = <&kp LSHFT>, <&td_caps>;
-
+            flavor = "tap-preferred";
+            bindings = <&kp LSHFT &td_caps>;
         };
 
         td_dsh: tap_dance_dash {
