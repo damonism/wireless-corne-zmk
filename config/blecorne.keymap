@@ -60,14 +60,17 @@
 
     behaviors {
     
+        shift_key: shift_key {
+            compatible = "zmk,behavior-key-press";
+            #binding-cells = <0>;
+            bindings = <&kp LSHFT>;
+        };
 
         td_caps: tap_dance_caps {
-
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
             bindings = <&caps_word>, <&kp CAPSLOCK>;
-
         };
 
         smart_shft: smart_shift {
@@ -76,7 +79,7 @@
             tapping-term-ms = <200>;
             quick-tap-ms = <200>;
             flavor = "tap-preferred";
-            bindings = <&kp LSHFT &td_caps>;
+            bindings = <&shift_key &td_caps>;
         };
 
         td_dsh: tap_dance_dash {
